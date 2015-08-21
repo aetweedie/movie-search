@@ -1,10 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" ng-app="movieSearch">
   <head>
     <meta charset="utf-8">
     <title>Movie Search</title>
+    <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
   </head>
-  <body>
-    
+  <body ng-controller="movies">
+
+    <h1>Angular OMDb Movie Search</h1>
+
+    <form class="search">
+      <label for="search">Search for a movie!</label>
+      <input type="search" name="s" id="search" placeholder="Search for a movie" ng-model="searchTerm">
+      <a href="/#/{{searchTerm}}" ng-click="submit(searchTerm)">Submit</a>
+    </form>
+<hr>
+    <div class="" ng-view></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-route.js"></script>
+  <script type="text/javascript" src="./javascripts/app.js"></script>
+  <script type="text/javascript" src="./javascripts/controllers.js"></script>
   </body>
 </html>
